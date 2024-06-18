@@ -18,7 +18,6 @@ function Header() {
       </Link>
 
       <div className="flex space-x-2">
-        {/* @ts-expect-error Server Component */}
         <GenreDropdown />
         <SearchInput />
         <ThemeToggler />

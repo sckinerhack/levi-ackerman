@@ -12,7 +12,6 @@ export default async function Home() {
 
   return (
     <main className="">
-      {/* @ts-expect-error Server Component */}
       <CarouselBannerWrapper />
       <div className="flex flex-col space-y-2 xl:-mt-48">
         <DbMoviesCarousel movies={topRatedMoviesDb.data as dbMovie[]} title="Top Rated"/>
