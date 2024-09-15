@@ -1,5 +1,5 @@
 import { searchMoviesByGenre } from "@/lib/getDbMovies"; // Adjust the import path as necessary
-import DbMovieCard from "@/components/DbMovieCard"; // Adjust the import path as necessary
+import DbMovieCardGenre from "@/components/DbMovieCardGenre"; // Adjust the import path as necessary
 import { dbMovie } from "@/typings";
 import { getPaginationPages } from "@/lib/utils";
 
@@ -28,7 +28,7 @@ async function GenrePage({ params: { id }, searchParams: { genre, page } }: Genr
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
         {fetchedMovies.map((movie) => (
           <div key={movie.id}>
-            <DbMovieCard movie={movie} />
+            <DbMovieCardGenre movie={movie} />
           </div>
         ))}
       </div>

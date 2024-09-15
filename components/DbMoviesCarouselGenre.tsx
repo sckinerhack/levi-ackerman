@@ -1,5 +1,5 @@
 import { dbMovie } from "@/typings";
-import DbMovieCardGenre from "./DbMovieCardGenre";
+import DbMovieCard from "./DbMovieCard";
 import { cn } from "@/lib/utils";
 // import { unstable_noStore } from 'next/cache';
 // unstable_noStore()
@@ -26,7 +26,7 @@ function MoviesCarousel({ title, movies, isVertical }: Props) {
                     "flex flex-col space-y-5 mb-5 justify-between items-center lg:flex-row space-x-5"
                 )}
               >
-                <DbMovieCardGenre movie={movie} />
+                <DbMovieCard movie={movie} />
                 <div className="max-w-2xl">
                   <p dir="rtl" className="font-bold overflow-hidden">
                     {movie.title}
@@ -36,7 +36,7 @@ function MoviesCarousel({ title, movies, isVertical }: Props) {
                 </div>
               </div>
             ))
-          : movies.map((movie) => <DbMovieCardGenre key={movie.id} movie={movie} />)}
+          : movies.map((movie) => <DbMovieCard key={movie.id} movie={movie} />)}
       </div>
     </div>
   );

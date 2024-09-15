@@ -12,7 +12,7 @@ function MovieCard({ movie }: { movie: dbMovie }) {
           {movie.title}
         </p>
         <Image
-          className="w-fit lg:min-w-[200px] h-64 object-cover object-center shadow-md shadow-gray-900 drop-shadow-xl rounded-sm"
+          className="w-fit lg:min-w-[400px] h-56 object-cover object-center shadow-md shadow-gray-900 drop-shadow-xl rounded-sm"
           src={movie.poster_path || movie.img_link} //  || movie.poster_path || movie.backdrop_path
           alt={movie.title}
           width={1920}
