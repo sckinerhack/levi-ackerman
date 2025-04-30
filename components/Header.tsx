@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { ThemeToggler } from "./ThemeToggler";
 import Link from "next/link";
 import GenreDropdown from "./GenreDropdown";
 import SearchInput from "./SearchInput";
+import HeaderClient from "./HeaderClient";
 
 function Header() {
   return (
@@ -17,10 +17,10 @@ function Header() {
         />
       </Link>
 
-      <div className="flex space-x-2">
+      <div className="flex space-x-2 items-center">
         <GenreDropdown />
         <SearchInput />
-        <ThemeToggler />
+        <HeaderClient />
       </div>
     </header>
   );
