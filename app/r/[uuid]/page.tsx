@@ -16,7 +16,9 @@ export async function generateMetadata({ params }: RedirectPageProps) {
     const collection = db.collection("redirects");
 
     // Find the redirect link by UUID
-    const redirectLink = await collection.findOne<RedirectLink>({ uuid });
+    const redirectLink = (await collection.findOne({
+      uuid,
+    })) as RedirectLink | null;
 
     if (redirectLink) {
       return {
@@ -47,7 +49,9 @@ export default async function RedirectPage({ params }: RedirectPageProps) {
     const collection = db.collection("redirects");
 
     // Find the redirect link by UUID
-    const redirectLink = await collection.findOne<RedirectLink>({ uuid });
+    const redirectLink = (await collection.findOne({
+      uuid,
+    })) as RedirectLink | null;
 
     if (!redirectLink) {
       // If the redirect link is not found, show a 404 page
